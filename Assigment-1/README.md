@@ -8,7 +8,10 @@
 >
 > Thereafter, you would require downloading the stock linux kernel and compiling and installing it on your testbench. Ensure that it boots up!
 
-<br>
+
+
+
+
 **Question 2**
 > Write a program in x86-64 assembly (in 64-bit mode) that:
 >   1. Takes a number and a string as input from the user’s console
