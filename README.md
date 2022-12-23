@@ -1,7 +1,6 @@
-## CSE231: Operating Systems
 Here's my coursework for the Operating Systems course at IIIT, Delhi
 
-## Broad topics of the assignments
+## Broad distribution of the assignments
 ### Assignment-0
 Setting up Artix VM and assembly programming (basic I/O program)
 
