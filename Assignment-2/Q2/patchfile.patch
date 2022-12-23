@@ -1,0 +1,32 @@
+--- linux-5.19.9-original/kernel/sys.c	2022-11-23 18:40:02.909953849 +0000
++++ linux-5.19.9/kernel/sys.c	2022-11-23 21:02:29.199966799 +0000
+@@ -341,18 +341,6 @@
+ 
+ 	return retval;
+ }
++SYSCALL_DEFINE4(kernel_2d_memcpy, float *, source, float *, dest, int, rows, int, cols) {
++	float buffer[rows][cols];
++	int rc1 = __copy_from_user(buffer, source, sizeof(buffer));
++	if (rc1) {
++		return -1;
++	}
++	int rc2 = __copy_from_user(dest, buffer, sizeof(buffer));
++	if (rc2) {
++		return -1;
++	}
++	return 0;
++}
+ 
+ /*
+  * Unprivileged users may change the real gid to the effective gid
+--- linux-5.19.9-original/arch/x86/entry/syscalls/syscall_64.tbl	2022-11-23 18:39:57.949953916 +0000
++++ linux-5.19.9/arch/x86/entry/syscalls/syscall_64.tbl	2022-11-23 19:21:15.379920312 +0000
+@@ -372,7 +372,7 @@
+ 448	common	process_mrelease	sys_process_mrelease
+ 449	common	futex_waitv		sys_futex_waitv
+ 450	common	set_mempolicy_home_node	sys_set_mempolicy_home_node
++451	common	kernel_2d_memcpy	sys_kernel_2d_memcpy
+-
+ #
+ # Due to a historical design error, certain syscalls are numbered differently
+ # in x32 as compared to native x86_64.  These syscalls have numbers 512-547.
