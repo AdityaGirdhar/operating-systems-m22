@@ -3,7 +3,7 @@
 * Run `make count`
 
 **For Question 1.2**
-* Run `make kernel`
+* Run `make kernel` (code is buggy, don't use)
 * Altenatively, you may run `make kernel-test` to simulate the compilation and save yourselves some time
 
 **For Question 2**
