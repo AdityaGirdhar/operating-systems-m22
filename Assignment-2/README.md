@@ -1,12 +1,12 @@
 ## Running and testing
-For Question 1.1
+**For Question 1.1**
 * Run `make count`
 
-For Question 1.2
+**For Question 1.2**
 * Run `make kernel`
 * Altenatively, you may run `make kernel-test` to simulate the compilation and save yourselves some time
 
-For Question 2
+**For Question 2**
 * Patch your kernel using `patchfile.patch` and reboot
 * Test the newly installed syscall by running `gcc test.c && ./a.out`
 
