@@ -1,4 +1,4 @@
-# Assignment-0: Setting up Artix VM and assembly programming
+## Assignment-0: Setting up Artix VM and assembly programming
 
 **Question 1**
 > The first assignment requires you to setup your testbench VM. The VM should not require too much resources – approximately 4 GB RAM, with 2 virtual CPU cores and about 20 GB of hard drive space.
@@ -12,3 +12,6 @@
 > Write a program in x86-64 assembly (in 64-bit mode) that:
 >   1. Takes a number and a string as input from the user’s console
 >   2. Prints the same number and same string to the user’s console
+
+## Running and testing
+* Run `make` on a unix-based terminal
